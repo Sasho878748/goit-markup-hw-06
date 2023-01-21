@@ -703,18 +703,63 @@ button {
   margin-bottom: 14px;
 }
 
+.modal-field {
+  margin-bottom: 8px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
 .modal-input {
   width: 100%;
   height: 40px;
   background-color: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  /* margin-bottom: 26px; */
-  padding-left: 24px;
+  padding-left: 38px;
+  outline: none;
+  transition: border-color 250ms var(--timing-function);
 }
 
-.modal-field {
-  margin-bottom: 8px;
+.modal-comet {
+  width: 100%;
+  height: 120px;
+  background-color: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 8px;
+  outline: none;
+  resize: none;
+  transition: border-color 250ms var(--timing-function);
+}
+
+.modal-comet::placeholder {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-input:focus {
+  border-color: var(--main-button-color);
+}
+
+.modal-input:focus + .input-icon {
+  fill: var(--main-button-color);
+}
+
+.modal-comet:focus {
+  border-color: var(--main-button-color);
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms var(--timing-function);
 }
 
 .input-text {
@@ -726,10 +771,40 @@ button {
 }
 
 .input-item {
+  display: inline-block;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--main-item-color);
+  margin-bottom: 4px;
 }
+
+.accept-text {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+
+/* .accept-text::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  display: block;
+}
+
+.accept-input:checked + .accept-text::before {
+background-color: var(--main-btn-color-2);
+border: none;
+background-image: url(../images/Check.svg);
+background-repeat: no-repeat;
+background-position: center;
+} */
