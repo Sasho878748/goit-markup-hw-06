@@ -422,6 +422,27 @@
             </li>
           </ul>
         </div>
+        <div class="sub-container">
+          <form class="sub-form">
+            <label for="subscribe" class="sub-text">Subscribe</label>
+            <div class="sub-container-btn">
+              <input
+                type="email"
+                class="sub-input"
+                name="user-email"
+                placeholder="E-mail"
+                id="subscribe"
+                required
+              />
+              <button class="sub-button" type="submit">
+                Subscribe
+                <svg class="sub-svg" width="24" height="24">
+                  <use class="sub-use" href="./images/symbol-defs.svg#icon-frame"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -470,12 +491,27 @@
             ></textarea>
           </div>
           <div class="modal-field">
-            <input type="checkbox" class="accept-input visually-hidden" name="accept" id="accept" value="accept" required/>
-            <label class="accept-text" for="accept"
-              >I accept the terms and conditions of the <span class="accept-span"><a class="accept-link" href="">Privacy Policy</a></span>
+            <input
+              type="checkbox"
+              class="accept-input visually-hidden"
+              name="accept"
+              id="accept"
+              value="accept"
+              required
+            />
+            <label class="accept-text" for="accept">
+              <span class="accept-text-span">
+                <svg class="check-icon" width="10" height="8">
+                  <use href="./images/symbol-defs.svg#icon-chek"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="accept-link" href="">Privacy Policy</a>
             </label>
           </div>
-          <button type="submit">Send</button>
+          <div class="container-modal-btn">
+            <button class="modal-button" type="submit">Send</button>
+          </div>
         </form>
       </div>
     </div>

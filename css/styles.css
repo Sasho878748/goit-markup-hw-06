@@ -220,10 +220,10 @@ button {
 }
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: var(--main-button-color);
+  background-color: var(--main-btn-color-2);
   color: var(--main-light-color);
   cursor: pointer;
-  border-color: var(--main-button-color);
+  border-color: var(--main-btn-color-2);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -502,6 +502,73 @@ button {
   background-color: #31d0aa;
 }
 
+.sub-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  
+}
+
+.sub-container {
+  margin-left: 80px;
+}
+
+.sub-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--main-hero-color);
+  outline: none;
+  padding-left: 16px;
+  color: #ffffff;
+}
+
+.sub-input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sub-button {
+  width: 165px;
+  height: 40px;
+  background: var(--main-button-color);
+  border-color: var(--main-button-color);
+  border-radius: 4px;
+  color: #ffffff;
+  fill: #ffffff;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  transition: background-color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
+}
+
+.sub-button:hover,
+.sub-button:focus {
+  background-color: var(--main-btn-color-2);
+  cursor: pointer;
+  border-color: var(--main-btn-color-2);
+}
+
+.sub-container-btn {
+  display: flex;
+  margin-top: 16px;
+}
+
 /* portfolio */
 
 .portfolio {
@@ -680,10 +747,22 @@ button {
   justify-content: center;
   width: 24px;
   height: 24px;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--main-btn-color-2);
+  border: none;
+}
+
+.modal-close:hover > .modal-svg {
+  fill: #ffffff;
 }
 
 .modal-svg {
   fill: #000;
+  transition: fill 250ms var(--timing-function);
 }
 
 .is-hidden {
@@ -790,21 +869,67 @@ button {
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: #757575;
+  margin-bottom: 24px;
 }
 
-/* .accept-text::before {
-  content: '';
+.accept-text-span {
   width: 16px;
   height: 16px;
   border: 1.25px solid #2e2f42;
   border-radius: 2px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  fill: transparent;
 }
 
-.accept-input:checked + .accept-text::before {
-background-color: var(--main-btn-color-2);
-border: none;
-background-image: url(../images/Check.svg);
-background-repeat: no-repeat;
-background-position: center;
-} */
+.accept-input:checked + .accept-text span {
+  background-color: var(--main-btn-color-2);
+  border: none;
+  fill: var(--main-comand-bg-color);
+}
+
+.accept-link {
+  margin-left: 5px;
+  color: var(--main-button-color);
+}
+
+.container-modal-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-button {
+  width: 169px;
+  height: 56px;
+
+  background: var(--main-button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: var(--main-button-color);
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function), border-color 250ms var(--timing-function);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  background-color: var(--main-btn-color-2);
+  color: var(--main-light-color);
+  cursor: pointer;
+  border-color: var(--main-btn-color-2);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}

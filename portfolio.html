@@ -28,8 +28,10 @@
             >Web<span class="studio-logo">Studio</span>
           </a>
           <ul class="header-list list">
-            <li class="item"><a class="header-link link " href="./index.html">Studio</a></li>
-            <li class="item"><a class="header-link link current" href="./portfolio.html">Portfolio</a></li>
+            <li class="item"><a class="header-link link" href="./index.html">Studio</a></li>
+            <li class="item">
+              <a class="header-link link current" href="./portfolio.html">Portfolio</a>
+            </li>
             <li class="item"><a class="header-link link" href="">Contacts</a></li>
           </ul>
         </nav>
@@ -288,6 +290,27 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="sub-container">
+          <form class="sub-form">
+            <label for="subscribe" class="sub-text">Subscribe</label>
+            <div class="sub-container-btn">
+              <input
+                type="email"
+                class="sub-input"
+                name="user-email"
+                placeholder="E-mail"
+                id="subscribe"
+                required
+              />
+              <button class="sub-button" type="submit">
+                Subscribe
+                <svg class="sub-svg" width="24" height="24">
+                  <use class="sub-use" href="./images/symbol-defs.svg#icon-frame"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
